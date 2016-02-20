@@ -1,0 +1,69 @@
+- var profi = {'HTML5': 1, 'CSS3 Responsivo': 1, 'SASS\\SCSS': .9, 'Bootstrap': .8, 'Animation': .8, 'Javascript': 1, 'Angular.js': .9, 'React.js': .75, 'd3.js': .8, 'Ionic': .9, 'Photoshop': .7, 'Illustrator': .7}
+- var perso = {'Adaptabilidade': 1, 'Criatividade': .9, 'Comunicação': .9, 'Flexibilidade': .9, 'Trabalho em Equipe': .85, 'Liderança': .8}
+- var langs = {'Português': 1, 'Inglês': .95, 'Francês': .9, 'Espanhol': .75}
+
+// programatic variables
+- var range = 20
+
+mixin skillList(skills)
+	ul
+		each stars, name in skills
+			li
+				= name
+				span.progBar
+					- var s = 0
+					while s < range
+						span.prog(class= stars * range > s++ ? 'active' : '')
+						
+mixin skillArticle(title, skills)
+	article
+		h3
+			= title
+			span.trace
+		div
+			+skillList(skills)
+			
+mixin mainItem(where, what, desc, time)
+	.item
+		h4
+			span.where= where
+			span.what= what
+		if time
+			.time= time
+		.desc= desc
+
+mixin mainArticle(name, icon)
+	article
+		h3
+			span.fa-stack.fa-lg
+				i.fa.fa-circle.fa-stack-2x
+				i.fa.fa-stack-1x.fa-inverse(class=icon)
+			=name
+			.trace
+			
+		if block
+			block
+
+base(target='_blank')
+
+header
+	h1 Victor Magalhães
+	h4 Programador Web & Móvel
+	div.info
+		span #[a(href='tel:+5571986815280') +55 71 98681 5280]
+		span #[a(href='mailto://victorhfmag@gmail.com') victorhfmag@gmail.com]
+		span #[a(href='http://codepen.io/vhfmag') codepen.io/vhfmag]
+
+.main
+	section.little
+		+skillArticle('Habilidades Profissionais', profi)
+		+skillArticle('Habilidades Pessoais', perso)
+		+skillArticle('Línguas', langs)
+		a.btn.bottom(href='http://codepen.io/vhfmag/pen/pgmPaV') Ver código fonte no CodePen
+	section.big
+		+mainArticle('Educação', 'fa-pencil')
+			+mainItem('Universidade Federal da Bahia', 'Engenharia Elétrica', 'Curso de engenharia elétrica com ênfase em controle e automação de sistemas lineares, além de eletrônica e programação de microcontroladores.', 'de 2012 a 2017')
+			+mainItem('ENSTA Bretagne', 'Sistemas de Percepção, Informação e Decisão', 'Curso de engenharia generalista com ênfase em sistemas de controle, telecomunicação e administração, voltado para o mercado de trabalho francês.', 'de 2014 a 2015')
+		+mainArticle('Experiência', 'fa-suitcase')
+			+mainItem('PET Elétrica', 'Bolsista', 'Grupo universitário com objetivo de realizar atividades que colaborem para a melhoria do curso em que está inserido. Durante o meu período de atuação no grupo, pude construir seu site institucional, sistemas de reserva de laboratórios e agendamento de atendimento e o protótipo de um robô móvel.', 'de 2012 a 2014')
+			+mainItem('Centro Acadêmico', 'Vice-presidente', 'O curso encontrava-se há mais de 5 anos sem gestão no centro acadêmico quando eu e mais dois colegas nos candidatamos, com o objetivo de revitalizá-lo e mantê-lo funcionando após a nossa saída, com sucesso. Durante o período conseguimos angariar voluntários e participar das instâncias de decisão na UFBA, representando os estudantes.', 'de 2013 a 2014')

@@ -1,0 +1,222 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,500);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
+body {
+  min-height: 100vh;
+  background-color: #FDFAF4;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
+  background-color: #EBD877;
+  color: #424149;
+  font-family: Raleway;
+  padding-top: 15px;
+  border-bottom: 3px solid #424149;
+}
+header, header * {
+  margin: 0;
+}
+header h1 {
+  font-weight: 300;
+  padding: 10px 20px;
+  border: 1px solid #424149;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 10px;
+  transition: all .5s ease-in-out;
+}
+header h1:hover {
+  background-color: #424149;
+  color: #EBD877;
+}
+header h4 {
+  font-weight: 300;
+  padding: 5px;
+}
+header .info {
+  padding: 5px 0 15px 0;
+}
+header .info span:not(:last-child) {
+  border: 0;
+  border-right: 1px solid white;
+  border-image: linear-gradient(to top, transparent 15%, #424149 35%, #424149 65%, transparent 85%) 1 100%;
+}
+header .info span {
+  padding: 0px 10px;
+}
+header .info a, header .info a:link, header .info a:visited, header .info a:hover {
+  text-decoration: none;
+  color: inherit;
+  transition: text-shadow .5s ease-out;
+}
+header .info a:hover {
+  text-shadow: 0 0 7px rgba(66, 65, 73, 0.25);
+}
+
+.main {
+  margin: 0;
+  padding: 0;
+  flex: 1 0 auto;
+  font-family: Lato;
+  display: flex;
+}
+.main section {
+  margin: 0;
+  padding: 10px 5px;
+}
+.main section.little {
+  width: 35%;
+  color: #FDFAF4;
+  background-color: #424149;
+}
+.main section.little article {
+  margin: 0;
+  padding: 1px 7px;
+}
+.main section.little article h3 {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-weight: 300;
+  color: #EBD877;
+}
+.main section.little article h3 .trace {
+  flex: 1 0 auto;
+  margin-left: 5px;
+  display: block;
+  height: 0px;
+  border: 0;
+  border-top: 1px solid #EBD877;
+  border-image: linear-gradient(to right, transparent, #EBD877 25%) 100% 0 0 0;
+}
+.main section.little article ul {
+  list-style-type: none;
+  padding: 0;
+}
+.main section.little article ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 300;
+  font-size: 0.85em;
+}
+.main section.little article ul li .progBar {
+  display: flex;
+  width: 50%;
+  height: 1em;
+  box-sizing: border-box;
+  background-color: #73717f;
+}
+.main section.little article ul li .progBar .prog {
+  flex: 1 0 auto;
+  background-color: transparent;
+}
+.main section.little article ul li .progBar .prog.active {
+  background-color: #EBD877;
+}
+.main section.big {
+  width: 65%;
+  background-color: #eaeaec;
+  padding: 10px 20px 30px;
+  box-sizing: border-box;
+}
+.main section.big h3 {
+  display: flex;
+  align-items: center;
+  color: #424149;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.main section.big h3 .fa-stack {
+  font-size: 1.2em;
+  margin-right: 5px;
+}
+.main section.big h3 .fa-stack .fa-inverse {
+  color: #EBD877;
+}
+.main section.big h3 .fa-stack:hover {
+  color: #EBD877;
+}
+.main section.big h3 .fa-stack:hover .fa-inverse {
+  color: #424149 !important;
+}
+.main section.big h3 .trace {
+  flex: 1 0 auto;
+  margin-left: 5px;
+  display: block;
+  height: 0px;
+  border: 0;
+  border-top: 1px solid #424149;
+  border-image: linear-gradient(to right, transparent, #424149 25%) 100% 0 0 0;
+}
+.main section.big .item {
+  padding-left: 25px;
+}
+.main section.big .item h4 {
+  margin: 10px 0 0 0;
+  font-family: Open Sans;
+}
+.main section.big .item h4 .where {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.main section.big .item h4 .what {
+  font-size: .9em;
+  font-weight: 400;
+  margin-left: 10px;
+}
+.main section.big .item .time {
+  font-family: Open Sans;
+  font-weight: 300;
+  font-size: .8em;
+}
+.main section.big .item .desc {
+  font-family: Open Sans;
+  font-size: .8em;
+  text-align: justify;
+}
+
+a.btn, a.btn:hover, a.btn:visited, a.btn:link {
+  color: #EBD877;
+  text-decoration: none;
+}
+
+.btn {
+  display: block;
+  margin: 5px 10px;
+  padding: 4px;
+  text-align: center;
+  border: 1px solid #EBD877;
+  border-radius: 3px;
+  transition: all .1s ease-in;
+  font-family: Raleway;
+}
+.btn:hover {
+  color: #424149 !important;
+  background-color: #EBD877;
+}
+
+@media screen and (max-width: 768px) {
+  .little, .big {
+    width: auto !important;
+  }
+
+  .main {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 530px) {
+  .info span {
+    border: 0 !important;
+    display: block;
+    text-align: center;
+  }
+}

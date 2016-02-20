@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Currículo</title>
+    
+    
+    <link rel="stylesheet" href="css/normalize.css">
+
+    
+        <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      @import url(https://fonts.googleapis.com/css?family=Raleway:400,300,500);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
+body {
+  min-height: 100vh;
+  background-color: #FDFAF4;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
+  background-color: #EBD877;
+  color: #424149;
+  font-family: Raleway;
+  padding-top: 15px;
+  border-bottom: 3px solid #424149;
+}
+header, header * {
+  margin: 0;
+}
+header h1 {
+  font-weight: 300;
+  padding: 10px 20px;
+  border: 1px solid #424149;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 10px;
+  transition: all .5s ease-in-out;
+}
+header h1:hover {
+  background-color: #424149;
+  color: #EBD877;
+}
+header h4 {
+  font-weight: 300;
+  padding: 5px;
+}
+header .info {
+  padding: 5px 0 15px 0;
+}
+header .info span:not(:last-child) {
+  border: 0;
+  border-right: 1px solid white;
+  border-image: linear-gradient(to top, transparent 15%, #424149 35%, #424149 65%, transparent 85%) 1 100%;
+}
+header .info span {
+  padding: 0px 10px;
+}
+header .info a, header .info a:link, header .info a:visited, header .info a:hover {
+  text-decoration: none;
+  color: inherit;
+  transition: text-shadow .5s ease-out;
+}
+header .info a:hover {
+  text-shadow: 0 0 7px rgba(66, 65, 73, 0.25);
+}
+
+.main {
+  margin: 0;
+  padding: 0;
+  flex: 1 0 auto;
+  font-family: Lato;
+  display: flex;
+}
+.main section {
+  margin: 0;
+  padding: 10px 5px;
+}
+.main section.little {
+  width: 35%;
+  color: #FDFAF4;
+  background-color: #424149;
+}
+.main section.little article {
+  margin: 0;
+  padding: 1px 7px;
+}
+.main section.little article h3 {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-weight: 300;
+  color: #EBD877;
+}
+.main section.little article h3 .trace {
+  flex: 1 0 auto;
+  margin-left: 5px;
+  display: block;
+  height: 0px;
+  border: 0;
+  border-top: 1px solid #EBD877;
+  border-image: linear-gradient(to right, transparent, #EBD877 25%) 100% 0 0 0;
+}
+.main section.little article ul {
+  list-style-type: none;
+  padding: 0;
+}
+.main section.little article ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 300;
+  font-size: 0.85em;
+}
+.main section.little article ul li .progBar {
+  display: flex;
+  width: 50%;
+  height: 1em;
+  box-sizing: border-box;
+  background-color: #73717f;
+}
+.main section.little article ul li .progBar .prog {
+  flex: 1 0 auto;
+  background-color: transparent;
+}
+.main section.little article ul li .progBar .prog.active {
+  background-color: #EBD877;
+}
+.main section.big {
+  width: 65%;
+  background-color: #eaeaec;
+  padding: 10px 20px 30px;
+  box-sizing: border-box;
+}
+.main section.big h3 {
+  display: flex;
+  align-items: center;
+  color: #424149;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.main section.big h3 .fa-stack {
+  font-size: 1.2em;
+  margin-right: 5px;
+}
+.main section.big h3 .fa-stack .fa-inverse {
+  color: #EBD877;
+}
+.main section.big h3 .fa-stack:hover {
+  color: #EBD877;
+}
+.main section.big h3 .fa-stack:hover .fa-inverse {
+  color: #424149 !important;
+}
+.main section.big h3 .trace {
+  flex: 1 0 auto;
+  margin-left: 5px;
+  display: block;
+  height: 0px;
+  border: 0;
+  border-top: 1px solid #424149;
+  border-image: linear-gradient(to right, transparent, #424149 25%) 100% 0 0 0;
+}
+.main section.big .item {
+  padding-left: 25px;
+}
+.main section.big .item h4 {
+  margin: 10px 0 0 0;
+  font-family: Open Sans;
+}
+.main section.big .item h4 .where {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.main section.big .item h4 .what {
+  font-size: .9em;
+  font-weight: 400;
+  margin-left: 10px;
+}
+.main section.big .item .time {
+  font-family: Open Sans;
+  font-weight: 300;
+  font-size: .8em;
+}
+.main section.big .item .desc {
+  font-family: Open Sans;
+  font-size: .8em;
+  text-align: justify;
+}
+
+a.btn, a.btn:hover, a.btn:visited, a.btn:link {
+  color: #EBD877;
+  text-decoration: none;
+}
+
+.btn {
+  display: block;
+  margin: 5px 10px;
+  padding: 4px;
+  text-align: center;
+  border: 1px solid #EBD877;
+  border-radius: 3px;
+  transition: all .1s ease-in;
+  font-family: Raleway;
+}
+.btn:hover {
+  color: #424149 !important;
+  background-color: #EBD877;
+}
+
+@media screen and (max-width: 768px) {
+  .little, .big {
+    width: auto !important;
+  }
+
+  .main {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 530px) {
+  .info span {
+    border: 0 !important;
+    display: block;
+    text-align: center;
+  }
+}
+
+    </style>
+
+    
+        <script src="js/prefixfree.min.js"></script>
+
+    
+  </head>
+
+  <body>
+
+    
+<!-- programatic variables-->
+<base target="_blank"/>
+<header>
+  <h1>Victor Magalhães</h1>
+  <h4>Programador Web & Móvel</h4>
+  <div class="info"><span><a href="tel:+5571986815280">+55 71 98681 5280</a></span><span><a href="mailto://victorhfmag@gmail.com">victorhfmag@gmail.com</a></span><span><a href="http://codepen.io/vhfmag">codepen.io/vhfmag</a></span></div>
+</header>
+<div class="main">
+  <section class="little">
+    <article>
+      <h3>Habilidades Profissionais<span class="trace"></span>
+      </h3>
+      <div>
+        <ul>
+          <li>HTML5<span class="progBar"><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span></span>
+          </li>
+          <li>CSS3 Responsivo<span class="progBar"><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span></span>
+          </li>
+          <li>SASS\SCSS<span class="progBar"><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog"></span><span class="prog"></span></span>
+          </li>
+          <li>Bootstrap<span class="progBar"><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog"></span><span class="prog"></span><span class="prog"></span><span class="prog"></span></span>
+          </li>
+          <li>Animation<span class="progBar"><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog"></span><span class="prog"></span><span class="prog"></span><span class="prog"></span></span>
+          </li>
+          <li>Javascript<span class="progBar"><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span></span>
+          </li>
+          <li>Angular.js<span class="progBar"><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog"></span><span class="prog"></span></span>
+          </li>
+          <li>React.js<span class="progBar"><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog"></span><span class="prog"></span><span class="prog"></span><span class="prog"></span><span class="prog"></span></span>
+          </li>
+          <li>d3.js<span class="progBar"><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog"></span><span class="prog"></span><span class="prog"></span><span class="prog"></span></span>
+          </li>
+          <li>Ionic<span class="progBar"><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog"></span><span class="prog"></span></span>
+          </li>
+          <li>Photoshop<span class="progBar"><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog"></span><span class="prog"></span><span class="prog"></span><span class="prog"></span><span class="prog"></span><span class="prog"></span></span>
+          </li>
+          <li>Illustrator<span class="progBar"><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog"></span><span class="prog"></span><span class="prog"></span><span class="prog"></span><span class="prog"></span><span class="prog"></span></span>
+          </li>
+        </ul>
+      </div>
+    </article>
+    <article>
+      <h3>Habilidades Pessoais<span class="trace"></span>
+      </h3>
+      <div>
+        <ul>
+          <li>Adaptabilidade<span class="progBar"><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span></span>
+          </li>
+          <li>Criatividade<span class="progBar"><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog"></span><span class="prog"></span></span>
+          </li>
+          <li>Comunicação<span class="progBar"><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog"></span><span class="prog"></span></span>
+          </li>
+          <li>Flexibilidade<span class="progBar"><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog"></span><span class="prog"></span></span>
+          </li>
+          <li>Trabalho em Equipe<span class="progBar"><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog"></span><span class="prog"></span><span class="prog"></span></span>
+          </li>
+          <li>Liderança<span class="progBar"><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog"></span><span class="prog"></span><span class="prog"></span><span class="prog"></span></span>
+          </li>
+        </ul>
+      </div>
+    </article>
+    <article>
+      <h3>Línguas<span class="trace"></span>
+      </h3>
+      <div>
+        <ul>
+          <li>Português<span class="progBar"><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span></span>
+          </li>
+          <li>Inglês<span class="progBar"><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog"></span></span>
+          </li>
+          <li>Francês<span class="progBar"><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog"></span><span class="prog"></span></span>
+          </li>
+          <li>Espanhol<span class="progBar"><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog active"></span><span class="prog"></span><span class="prog"></span><span class="prog"></span><span class="prog"></span><span class="prog"></span></span>
+          </li>
+        </ul>
+      </div>
+    </article><a href="http://codepen.io/vhfmag/pen/pgmPaV" class="btn bottom">Ver código fonte no CodePen</a>
+  </section>
+  <section class="big">
+    <article>
+      <h3><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-stack-1x fa-inverse fa-pencil"></i></span>Educação
+        <div class="trace"></div>
+      </h3>
+      <div class="item">
+        <h4><span class="where">Universidade Federal da Bahia</span><span class="what">Engenharia Elétrica</span></h4>
+        <div class="time">de 2012 a 2017</div>
+        <div class="desc">Curso de engenharia elétrica com ênfase em controle e automação de sistemas lineares, além de eletrônica e programação de microcontroladores.</div>
+      </div>
+      <div class="item">
+        <h4><span class="where">ENSTA Bretagne</span><span class="what">Sistemas de Percepção, Informação e Decisão</span></h4>
+        <div class="time">de 2014 a 2015</div>
+        <div class="desc">Curso de engenharia generalista com ênfase em sistemas de controle, telecomunicação e administração, voltado para o mercado de trabalho francês.</div>
+      </div>
+    </article>
+    <article>
+      <h3><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-stack-1x fa-inverse fa-suitcase"></i></span>Experiência
+        <div class="trace"></div>
+      </h3>
+      <div class="item">
+        <h4><span class="where">PET Elétrica</span><span class="what">Bolsista</span></h4>
+        <div class="time">de 2012 a 2014</div>
+        <div class="desc">Grupo universitário com objetivo de realizar atividades que colaborem para a melhoria do curso em que está inserido. Durante o meu período de atuação no grupo, pude construir seu site institucional, sistemas de reserva de laboratórios e agendamento de atendimento e o protótipo de um robô móvel.</div>
+      </div>
+      <div class="item">
+        <h4><span class="where">Centro Acadêmico</span><span class="what">Vice-presidente</span></h4>
+        <div class="time">de 2013 a 2014</div>
+        <div class="desc">O curso encontrava-se há mais de 5 anos sem gestão no centro acadêmico quando eu e mais dois colegas nos candidatamos, com o objetivo de revitalizá-lo e mantê-lo funcionando após a nossa saída, com sucesso. Durante o período conseguimos angariar voluntários e participar das instâncias de decisão na UFBA, representando os estudantes.</div>
+      </div>
+    </article>
+  </section>
+</div>
+    
+    
+    
+    
+    
+  </body>
+</html>
